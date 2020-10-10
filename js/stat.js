@@ -49,9 +49,6 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText(names[i], NAME_X + (BAR_WIDTH + BAR_GAP) * i, NAME_Y);
     ctx.fillText(Math.round(times[i]), NAME_X + (BAR_WIDTH + BAR_GAP) * i, NAME_Y - ((BAR_MAX_HEIGHT * times[i]) / maxTime) - GAP * 1.5);
 
-    // let barColor = 'hsl(' + 240 + ', ' + Math.random(0, 100) + '%, ' + 50 + '%)';
-    // let barColor = 'hsl(' + 240 + ', ' + randomInteger(1, 100) + '%, ' + 50 + '%)';
-
     if (names[i] === `Вы`) {
       ctx.fillStyle = `rgba(255, 0, 0, 1)`;
     } else {
