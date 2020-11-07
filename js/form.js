@@ -17,4 +17,12 @@
       userNameInput.setCustomValidity(``);
     }
   });
+
+  const form = document.querySelector(`.setup-wizard-form`);
+  form.addEventListener(`submit`, function (evt) {
+    window.backend.save(new FormData(form), function () {
+      window.characterSetup.classList.add(`hidden`);
+    });
+    evt.preventDefault();
+  });
 })();

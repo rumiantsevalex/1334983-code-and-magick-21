@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 'use strict';
 
 // Описываем функции, которые используются в проекте
@@ -14,6 +15,10 @@
         }
       }
       return maxElement;
+    },
+    // аргумент shuffle для перемешивания sort()
+    shuffle: function () {
+      return Math.random() - 0.5;
     },
     isEscEvent: function (evt, action) {
       if (evt.keyCode === ESC_KEYCODE) {
